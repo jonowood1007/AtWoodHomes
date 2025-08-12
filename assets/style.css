@@ -121,8 +121,8 @@ main.container {
 
 /* Footer */
 footer{background:#000;color:#ddd;min-height:20vh}
-footer .bold{padding:24px 0 24px 0; font-weight :bold}
-footer .inner{padding:0 0}
+footer .bold{padding:24px 0 24px 24px; font-weight :bold}
+footer .inner{padding:0 0 30px 24px}
 footer a{color:#fff;text-decoration:underline}
 /* Forms */
 label{display:block;margin:8px 0 6px 0;color:#fff}
