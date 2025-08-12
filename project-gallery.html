@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Gallery · At Wood Homes</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>
+function openLightbox(img) {
+  document.getElementById('lightbox-img').src = img.src.replace('-thumb', ''); // Use full-size image if naming convention
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+</script>
+<body>
+
+<header class="site-header">
+  <div class="container topbar">
+    <a class="brand" href="index.html" aria-label="At Wood Homes">
+      
+      <img src="assets/logo.jpg" alt="At Wood Homes logo" style="height:80px">
+      
+      <div class="title">At Wood Homes</div>
+    </a>
+    <nav class="nav"><a href="index.html" class="">Home</a><a href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="project-gallery.html" class="active">Project Gallery</a><a href="contact.html" class="">Contact</a></nav>
+  </div>
+</header>
+
+<!-- <section class="hero"><div class="overlay"></div><div class="container content"><h1>Project Gallery</h1></div></section> -->
+<main class="container main-container">
+  <section class="section">
+    <h2>Project Gallary</h2>
+    <div class="gallery">
+      <img src="images/projects/project1.jpg" alt="Project 1" onclick="openLightbox(this)">
+      <img src="images/projects/project2.jpg" alt="Project 2" onclick="openLightbox(this)">
+      <img src="images/projects/project3.jpg" alt="Project 3" onclick="openLightbox(this)">
+    </div>
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Full Size">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container bold">
+    <div>Contact</div>    
+  </div>  
+  <div class="container inner">
+    <div>Nathan Wood</div>
+    <div>At Wood Homes Ltd © 2007 </div>
+    <!-- <div>Phone: <a href="tel:+64210327089">021 032 7089</a> · Email: <a href="mailto:atwoodhomesltd@gmail.com">atwoodhomesltd@gmail.com</a></div> -->
+    <div>Phone: 021 032 7089</div>
+    <div>Email: <a href="mailto:atwoodhomesltd@gmail.com">atwoodhomesltd@gmail.com</a></div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</footer>
+
+</body>
+</html>
