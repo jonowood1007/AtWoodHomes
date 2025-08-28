@@ -210,6 +210,11 @@ input,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;f
 button.btn{display:inline-block;background:#000;color:#fff;border:0;padding:12px 16px;border-radius:6px;cursor:pointer}
 button.btn:hover{opacity:.9}
 
+/* Explicitly hide the nav-toggle on larger screens to avoid stray icon artifacts */
+@media (min-width:701px) {
+  .nav-toggle{display:none !important}
+}
+
 /* Ensure hamburger is visible on small screens (override ordering) */
 @media (max-width:700px) {
   .nav-toggle{display:inline-block !important}
