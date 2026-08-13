@@ -85,6 +85,10 @@
 </footer>
 <script>
     if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+      APIUrl: 'http://atwoodhomes.co.nz/.netlify/identity'
+      });
+
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           // Listen for when the user finishes logging in or accepting an invite
