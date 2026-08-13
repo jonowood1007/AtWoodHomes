@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main  # Change to 'master' if your repo default branch is master
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/projects"
+public_folder: "/images/projects"
 
 collections:
   - name: "photos"
