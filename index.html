@@ -8,6 +8,7 @@
 <link rel="shortcut icon" href="assets/favicon.ico">
 <link rel="apple-touch-icon" href="assets/logo.jpg">
 <link rel="stylesheet" href="assets/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <body>
 
 <header class="site-header">
@@ -82,6 +83,18 @@
     })();
   </script>
 </footer>
-
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          // Listen for when the user finishes logging in or accepting an invite
+          window.netlifyIdentity.on("login", () => {
+            // Send them straight to the admin dashboard
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
