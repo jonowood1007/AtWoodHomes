@@ -1,16 +1,21 @@
 backend:
-  name: git-gateway
-  branch: main  # Change to 'master' if your repo default branch is master
+  #name: git-gateway
+  #branch: main  # Change to 'master' if your repo default branch is master
+  name: github
+  repo: jonowood1007/AtWoodHomes   # e.g. jsmith/my-portfolio
+  branch: main
+  base_url: https://atwoodhomes.netlify.app
+  auth_endpoint: auth
 
 media_folder: "images/projects"
 public_folder: "/images/projects"
 
 collections:
-  - name: "photos"
-    label: "Gallery Photos"
-    folder: "content/photos"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Photo", name: "image", widget: "image" }
-      - { label: "Caption", name: "caption", widget: "string", required: false }
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - label: "Gallery Photos"
+        name: "gallery"
+        file: "gallery/photos.json"   # a simple JSON list your site's JS reads
+        fields:
+          - { label: "Photos", name: "photos", widget: "list", field: { label: Image, name: image, widget: image } }
