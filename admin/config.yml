@@ -4,8 +4,8 @@ backend:
   name: github
   repo: jonowood1007/AtWoodHomes   # e.g. jsmith/my-portfolio
   branch: main
-  base_url: https://atwoodhomes.netlify.app
-  auth_endpoint: auth
+  base_url: https://api.netlify.com
+  
 
 media_folder: "images/projects"
 public_folder: "/images/projects"
